@@ -1,0 +1,50 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>My Movie Website</title>
+    <link rel="stylesheet" href="style/navbar.css">
+    <link rel="stylesheet" href="style/homestyle.css">
+    <link rel="stylesheet" href="style/poster.css">
+    
+     <!-- <script src="api-keys.js"></script> -->
+     
+</head>
+<body>
+        <div id="navbar"></div>
+    
+    
+        <script src="loadnavbar.js"></script>
+
+        <!-- TOP RATED -->
+        <h1>Top Rated Movies</h1>
+        <div class="movie-scroll-container">
+            <div id="movie-posters"></div>
+        </div>
+       
+        <script>
+            // API endpoint to retrieve top 7 rated movies
+            // Function to retrieve data from API and render poster images
+            $.getJSON('http://localhost:3000/movie', function(data) {
+                var movies = data.results;
+                //Render posters of first 7 movies
+                for (var i = 0; i < 7; i++) {
+                    var poster_url = "https://image.tmdb.org/t/p/w185" + movies[i].poster_path;
+                    var poster = "<img src='" + poster_url + "'>";
+                    $("#movie-posters").append(poster);
+                }
+                });
+        
+            
+
+        </script>
+
+    <footer>
+        <p>&copy; 2023 The Movie APP. All rights reserved.</p>
+    </footer>
+</body>
+</html>
