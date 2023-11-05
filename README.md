@@ -1,6 +1,6 @@
 # final-project-Team-9 FOR TESTING .
 ## NOTE ! : Full porjects with contribution/branches in repository https://github.com/cop4808-spring-2023-fullstack-web/Firebase-Movie-app-Project
-* Carlo Leiva
+* Carlo Leiva (Lead)
 * Anastasija Bulatovic
 * Marven Cesar
 * Thomas Wozniak
